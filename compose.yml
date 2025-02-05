@@ -1,0 +1,18 @@
+services:
+  fiber-service:
+    image: rishaveeplus/fiber-service
+    environment:
+      - Port=8000
+      - Mode=dev
+    env_file:
+      - .env
+    networks:
+      - api_network
+    ports:
+      - 8000:8000
+networks:
+  api_network:
+    external : true
+    
+
+
